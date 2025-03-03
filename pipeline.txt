@@ -15,7 +15,8 @@ pipeline {
                 withCredentials([azureServicePrincipal('azure_sp')]) {
                     /* groovylint-disable-next-line LineLength */
                     bat 'az login --service-principal -u %AZURE_CLIENT_ID% -p %AZURE_CLIENT_SECRET% -t %AZURE_TENANT_ID%'
-                    or bat'az login --service-principal --username 18659d11-11e4-42e5-9b69-638274387bc1 --password oao8Q~Y4P3khkyprDLJ297.sW3dQgC1q.A_6uaD~ --tenant a2dcda4c-6820-4a91-a47f-0cec6a622c84'
+                    //or 
+                    bat'az login --service-principal --username 18659d11-11e4-42e5-9b69-638274387bc1 --password oao8Q~Y4P3khkyprDLJ297.sW3dQgC1q.A_6uaD~ --tenant a2dcda4c-6820-4a91-a47f-0cec6a622c84'
                     echo 'Az login successfully'
                 }
             }
